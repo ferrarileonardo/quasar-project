@@ -6,6 +6,17 @@
       :todos="todos"
       :meta="meta"
     ></example-component>
+    <GenericFormSetup
+      name-label="Nombre"
+      age-label="Edad"
+      accept-label="Acepto los términos"
+      :has-text="true"
+      :text-count="2"
+      :has-checkbox="true"
+      :checkbox-count="3"
+      :has-radio="true"
+      :has-file="true"
+    />
   </q-page>
 </template>
 
@@ -13,7 +24,7 @@
 import { ref } from 'vue';
 import { Todo, Meta } from 'components/models';
 import ExampleComponent from 'components/ExampleComponent.vue';
-
+import GenericFormSetup from 'src/components/GenericFormSetup.vue';
 defineOptions({
   name: 'IndexPage',
 });
